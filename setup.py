@@ -34,7 +34,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/usegalaxy-eu/MultiClassPredict",
     packages=find_packages(include=["multiclasspredict", "multiclasspredict.*"]),
-    license="MIT"
+    license="MIT",
     install_requires=install_requires,
     
     entry_points={
