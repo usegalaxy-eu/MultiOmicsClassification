@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 version = {}
-with open(os.path.join("mcp", "version.py"), encoding="utf-8") as f:
+with open("version.py", encoding="utf-8") as f:
     exec(f.read(), version)
 
 with open("README.md", "r", encoding="utf-8") as fh:
