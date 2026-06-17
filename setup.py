@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-
+import os
 
 version = {}
 with open(os.path.join("mcp", "version.py"), encoding="utf-8") as f:
