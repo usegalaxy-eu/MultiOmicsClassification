@@ -6,38 +6,44 @@ Multiomics Data in Galaxy
 
 Input
 =====
-The tool requires following inputs:
+The tool requires following inputs :
 
-    - Feature matrix file (required)
-      - Tab-separated file.
-      - Formatted with features as columns and samples as rows.
-      
-    - Target file (required)
-      - Tab-separated file
-      - Must contain a column named either: target or Sample_Condition
+- Feature matrix file (required)
+  - Tab-separated file.
+  - Formatted with features as columns and samples as rows.
+  
+- Target file (required)
+  - Tab-separated file
+  - Must contain a column named either: target or Sample_Condition
 
-    - Feature counts (k) (required)
-      - Comma-separated list of numbers specifying how many top features to evaluate (e.g., 10,50,100).
-      
-    - Number of seeds (n) (default = 2)
-    - Dataset label (required)
-      - A user-defined label for the experiment
-      - Used only for storing results (not for modeling logic).
-    - Model type (required)
-      - rf (RandomForest)
-      - xgb (XGBoost)
-      - etc (ExtraTreesClassifier)
-      - lgbm (LightGBM)
-      - tabpfn (TabPFN model)
-    - Sampling strategy (required)
-      - No Sampling
-      - Random OverSampling
-      - SMOTE
-      - Random UnderSampling
-      - NearMiss (v1)
-      - NearMiss (v2)
-      - NearMiss (v3)
-    - Grid Search (optional)
+- Feature counts (k) (required)
+  - Comma-separated list of numbers specifying how many top features to evaluate (e.g., 10,50,100).
+  
+- Number of seeds (n) (default = 2)
+
+- Dataset label (required)
+  - A user-defined label for the experiment
+  - Used only for storing results (not for modeling logic).
+    
+- Model type (required)
+  - rf (RandomForest)
+  - xgb (XGBoost)
+  - etc (ExtraTreesClassifier)
+  - lgbm (LightGBM)
+  - tabpfn (TabPFN model)
+    
+- Sampling strategy (required)
+  - No Sampling
+  - Random OverSampling
+  - SMOTE
+  - Random UnderSampling
+  - NearMiss (v1)
+  - NearMiss (v2)
+  - NearMiss (v3)
+    
+- Grid Search (optional)
+  - Enables hyperparameter optimization
+  - Can substantially increase runtime
 
 Output
 ======
