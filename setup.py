@@ -39,7 +39,7 @@ setup(
     
     entry_points={
         "console_scripts": [
-            "multiclasspredict=multiclaspredict.cli:cli"
+            "multiclasspredict=multiclasspredict.cli:cli"
         ]
     },
 
