@@ -32,7 +32,7 @@ setup(
     description="Multi Class Prediction",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/usegalaxy-eu/MultiClassPredict",
+    url="https://github.com/usegalaxy-eu/MultiOmicsClassification",
     packages=find_packages(include=["multiclasspredict", "multiclasspredict.*"]),
     license="MIT",
     install_requires=install_requires,
