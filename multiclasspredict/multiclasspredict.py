@@ -376,6 +376,7 @@ def repeat_clf(n_seeds, ks, X, y, label, model, sampling_strategy, use_grid=Fals
                 "Label": label,
                 "Model": model,
                 "Sampling_Strategy": sampling_strategy,
+                "Grid_Search": use_grid,
             }
 
         seed_results[seed] = copy.copy(ks_results)
@@ -405,6 +406,7 @@ def store_results(seed_results, output):
             model = result_info["Model"]
             sampling_strategy = result_info["Sampling_Strategy"]
             label = result_info["Label"]
+            grid_search = result_info.get("Grid_Search", False)
                         
             # Determine Class and Type
            
@@ -446,6 +448,7 @@ def store_results(seed_results, output):
                     "Features (k)": k,
                     "Label": label,
                     "Model": model,
+                    "Hyper Parameter tuning" : grid_search,
                     "Sampling_Strategy": sampling_strategy,
                     "Class": class_name,
                     "Type": type_name,
@@ -453,13 +456,6 @@ def store_results(seed_results, output):
                 })
                 
     df = pd.DataFrame(final_results)
-
-    '''#Set multi-level index names for clarity
-    df.set_index(["Seed", "Features (k)", "Label", "Model", "Sampling_Strategy"], inplace=True)
-
-    df.index.names = ["Seed", "Features (k)","Label","Model","Sampling_Strategy"]
-    # Display the DataFrame
-    df = df.reset_index()'''
     print(df.head())
     print(df.shape)
 
